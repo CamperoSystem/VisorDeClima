@@ -1,50 +1,124 @@
-# Welcome to your Expo app 👋
+🌤️ Visor de Clima
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+Una aplicación móvil desarrollada con React Native y Expo que permite consultar el clima actual y el pronóstico de 7 días para cualquier ciudad. Esta app utiliza OpenWeatherMap para el clima actual y WeatherAPI para el pronóstico semanal.
 
-## Get started
+🔹 Funcionalidades
 
-1. Install dependencies
+Buscar cualquier ciudad del mundo.
 
-   ```bash
-   npm install
-   ```
+Mostrar el clima actual:
 
-2. Start the app
+Temperatura
 
-   ```bash
-   npx expo start
-   ```
+Descripción
 
-In the output, you'll find options to open the app in a
+Icono del clima
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+Velocidad del viento
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+Humedad
 
-## Get a fresh project
+Ver pronóstico de 7 días en un carrusel horizontal:
 
-When you're ready, run:
+Temperatura promedio, mínima y máxima
 
-```bash
-npm run reset-project
-```
+Condición del clima con icono
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+Viento y humedad
 
-## Learn more
+Animaciones suaves al mostrar la información.
 
-To learn more about developing your project with Expo, look at the following resources:
+Gradientes dinámicos según el tipo de clima.
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+Manejo de errores para ciudad no encontrada o problemas de conexión.
 
-## Join the community
+📸 Capturas de pantalla
 
-Join our community of developers creating universal apps.
+Pantalla principal (buscar ciudad y clima actual):
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+<img width="265" height="584" alt="image" src="https://github.com/user-attachments/assets/80ed7627-1ee5-435d-be07-e963dd4441a2" />
+
+
+Pronóstico de 7 días:
+
+<img width="267" height="587" alt="image" src="https://github.com/user-attachments/assets/2f0f88f5-75e5-43f6-8ad4-f51fc6e4bf99" />
+
+
+⚡ Tecnologías
+
+React Native
+
+Expo
+
+TypeScript
+
+React Navigation / Expo Router
+
+API OpenWeatherMap
+
+API WeatherAPI
+
+Expo LinearGradient para efectos de fondo
+
+Animaciones con Animated
+
+🚀 Instalación
+
+Clonar el repositorio:
+
+git clone https://github.com/CamperoSystem/VisorDeClima.git
+
+cd VisorDeClima
+
+
+Instalar dependencias:
+
+npm install
+
+
+Instalar Expo CLI si no lo tienes:
+
+npm install -g expo-cli
+
+
+Iniciar la app:
+
+npx expo start
+
+
+Se abrirá el navegador con el Metro Bundler para correr la app en Android, iOS o simulador web.
+
+🔑 Configuración de APIs
+
+OpenWeatherMap:
+Crea una cuenta en OpenWeatherMap
+ y reemplaza tu apiKey en Index.tsx.
+
+WeatherAPI:
+Crea una cuenta en WeatherAPI
+ y reemplaza tu apiKey en explore.tsx.
+
+🛠️ Estructura del proyecto
+/app
+  ├─ index.tsx        -> Pantalla principal
+  ├─ explore.tsx     -> Pronóstico 7 días
+/assets
+  ├─ screenshots     -> Capturas de pantalla
+
+📌 Uso
+
+Ingresar el nombre de la ciudad en la barra de búsqueda.
+
+Presionar Buscar.
+
+Visualizar el clima actual.
+
+Presionar Ver pronóstico 7 días para ver el pronóstico semanal en un carrusel horizontal.
+
+⚠️ Notas
+
+Asegúrate de tener conexión a Internet para consultar las APIs.
+
+Si la ciudad no existe o hay un error de red, se mostrará un mensaje de error en la app.
+
+Los gradientes y colores cambian según el tipo de clima para mejorar la experiencia visual.
